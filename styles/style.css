@@ -65,7 +65,7 @@ a {
 
 .wrapper {
   overflow: hidden;
-  background: rgb(2, 0, 36);
+  background: rgba(234, 171, 138, 0.9);
   background: linear-gradient(
     143deg,
     rgba(2, 0, 36, 1) 1%,
@@ -94,6 +94,7 @@ a {
   text-transform: uppercase;
   font-size: 60px;
   text-shadow: 3px 0 rgb(239 171 138 / 80%);
+  text-align: center;
 }
 
 .header {
@@ -167,7 +168,7 @@ a {
 
 .about-me-img img {
   max-width: 100%;
-  max-height: 100%x;
+  max-height: 100%;
   width: auto;
   height: auto;
   border-radius: 25% 10%;
@@ -180,7 +181,8 @@ a {
 
 .about-me-label,
 .about-my-projects,
-.main-content-title-education {
+.main-content-title-education,
+.footer-title-contact {
   display: block;
   font-size: 40px;
   font-weight: 700;
@@ -208,6 +210,7 @@ a {
 
 .details-portfolio {
   display: flex;
+  flex-wrap: wrap;
   margin: 0 -15px;
 }
 
@@ -242,8 +245,9 @@ a {
 }
 
 .portfolio-gallery a:hover {
-  box-shadow: 10px 10px 10px rgb(137 77 74 / 100%);
+  /* box-shadow: 10px 10px 10px rgb(137 77 74 / 100%); */
   border-radius: 4px;
+  filter: drop-shadow(10px 10px 10px hsl(3deg 30% 41% / 90%));
 }
 
 .portfolio-img {
@@ -261,7 +265,8 @@ a {
 }
 
 .detail-link:hover {
-  box-shadow: 10px 10px 10px rgba(137, 77, 74, 0.9);
+  /* box-shadow: 10px 10px 10px rgba(137, 77, 74, 0.9); */
+  filter: drop-shadow(10px 10px 10px hsl(3deg 30% 41% / 90%));
 }
 
 .my-education-section {
@@ -318,17 +323,7 @@ a {
 
 /* --------------------------------------------FOOTER */
 footer {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    0deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(204, 183, 164, 1) 28%,
-    rgba(145, 196, 197, 1) 70%,
-    rgba(123, 198, 206, 1) 94%,
-    rgba(127, 190, 199, 1) 96%,
-    rgba(28, 207, 243, 1) 98%,
-    rgba(0, 212, 255, 0.8631827731092436) 100%
-  );
+  background: linear-gradient(#b7bcb0, #3cd4f1);
 }
 footer .container {
   position: relative;
@@ -348,14 +343,8 @@ footer .container {
 
 .footer-title-contact {
   position: absolute;
-  display: block;
   font-size: 14px;
-  font-weight: 700;
-  line-height: 1.5;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #000;
-  text-shadow: 2px 0 rgb(239 171 138 / 100%);
+  margin-bottom: 0;
   width: 100px;
   height: 40px;
   padding: 10px 0;
@@ -364,6 +353,7 @@ footer .container {
   text-align: center;
   border-top-left-radius: 3px;
   background: rgba(239 171 138 / 100%);
+  filter: drop-shadow(1px 2px 2px hsl(200deg 60% 50%));
 }
 
 .footer-title-contact::before,
@@ -389,6 +379,7 @@ footer .container {
   border-left: 50px solid rgba(239 171 138 / 100%);
   border-right: 50px solid rgba(239 171 138 / 100%);
   border-bottom: 25px solid transparent;
+  /* filter: drop-shadow(10px 10px 3px hsl(200deg 60% 50%)); */
 }
 
 .footer-nav:not(:last-child) {
@@ -460,69 +451,106 @@ footer .container {
 
 /* ----------------------------------------------------------------------------------- */
 
-/* @media (max-width: 1023px) {
-  .hero-title {
-    font-size: 65px;
-    max-width: 380px;
-  }
-
-  .doc-care-img {
-    width: 45%;
-  }
-
-  .doc-care-info {
-    width: 55%;
-    padding-left: 30px;
-  }
-
-  .box-product {
-    padding-bottom: 10px;
-  }
-
-  .box-product.card-small {
-    width: 50%;
-  }
-
-  .details-card-gallery {
+@media (max-width: 968px) {
+  .details-portfolio {
     flex-wrap: wrap;
   }
 
-  .gallery-box {
-    width: 100%;
-  }
-
-  .gallery-box:last-child {
-    padding-top: 30px;
-  }
-} */
-
-/* @media (max-width: 767px) {
-  .title {
-    font-size: 28px;
-  }
-
-  /* .action-item-menu {
-    display: block;
-  } */
-
-/* add class "is-open" to <nav class="header-nav"> result <nav class="header-nav is-open"> */
-
-/* @media (max-width: 520px) {
-  .box-product,
-  .box-product.card-small {
-    width: 100%;
-    padding-bottom: 0;
-  }
-
-  .gallery-card {
-    height: 170px;
-    padding: 25px 15px;
-    border-radius: 5px;
-  }
-}    position: fixed;
-    z-index: 9;
+  .portfolio-box {
     width: 50%;
-    min-width: 275px;
-    background-color: #fff;
-    top: 0;
-    left: 0; */
+  }
+
+  .portfolio-card {
+    padding: 5px;
+  }
+
+  .portfolio-img {
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-item .nav-link {
+    font-size: 16px;
+  }
+
+  .about-me-wrap {
+    flex-direction: column;
+  }
+
+  .about-me-img {
+    width: 100%;
+  }
+
+  .about-me-img img {
+    height: 420px;
+  }
+
+  .about-me-info {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .about-me-title {
+    font-size: 30px;
+  }
+
+  .about-me-description {
+    font-size: 20px;
+  }
+
+  .footer {
+    padding-bottom: 20px;
+  }
+
+  .footer-nav {
+    padding-top: 10px;
+  }
+
+  .footer-contacts {
+    flex-direction: column;
+    align-items: start;
+    margin-left: 0;
+    padding: 10px 0 10px 115px;
+  }
+}
+
+@media (max-width: 670px) {
+  .portfolio-box {
+    width: 100%;
+  }
+
+  .portfolio-title {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .header-wrap {
+    padding: 5px 0;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+  }
+
+  .nav-item {
+    padding-right: 20px;
+  }
+
+  .about-me-label,
+  .about-my-projects,
+  .main-content-title-education {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 414px) {
+  .heading-text {
+    font-size: 40px;
+  }
+
+  .footer-contacts {
+    padding-left: 0;
+  }
+}
