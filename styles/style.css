@@ -202,6 +202,9 @@ a {
 
 .about-me-description {
   margin-bottom: 40px;
+  color: #fff;
+  text-shadow: 1px 2px #000;
+  line-height: 2;
 }
 
 .portfolio {
